@@ -1,0 +1,69 @@
+
+body {
+  background-color: #f8f9fa;
+  font-family: 'Arial', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+}
+h2 {
+  font-weight: 600;
+  color: red;
+}
+.drag-area {
+  border: 2px dashed red;
+  padding: 30px;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+.drag-area.dragging {
+  background-color: #e6f7ff;
+}
+#fileList {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+#fileList li {
+  background-color: #ffffff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.loading-spinner {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: red;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-right: 10px;
+}
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+.file-status {
+  font-size: 0.9rem;
+  margin-left: 10px;
+}
+.file-status.processing {
+  color: #ffc107;
+}
+.file-status.complete {
+  color: #28a745;
+}
+.drag-area p {
+  color: red;
+  font-weight: 600;
+}
